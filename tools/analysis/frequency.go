@@ -1,5 +1,9 @@
 package analysis
 
+import (
+	"github.com/camggould/binary-pattern-analysis/tools/utils"
+)
+
 func PrintCharacterFrequencies(input string) {
 	frequencyMap  := map[string]int{}
 
@@ -12,4 +16,6 @@ func PrintCharacterFrequencies(input string) {
 			frequencyMap[currentCharacter] = 1
 		}
 	}
+
+	utils.PPrintMap(frequencyMap)
 }
