@@ -12,6 +12,6 @@ The data for these ciphers as they are presented can be found in the `data` fold
 
 An important primer on the encoding techniques leveraged as obfuscation here. Several forms of data encodings are being leveraged across these ciphers: octal, decimal, hexadecimal, and base64 are all used or have been used on other complex ciphers created by the same author.
 
-Octal, decimal, hexadecimal, and base64 can all be used to encode ASCII or Latin1 text from an [ASCII/extended ASCII table](https://www.schoolcoders.com/data-representation/characters/extended-ascii/). The ASCII table maps numbers to symbols/letters. Those numbers can be converted out of decimal to other bases. Binary, octal, and hex are more common but base64 is also possible. Base64 can also be used to encode text directly.
+Octal, decimal, hexadecimal, and base64 can all be used to encode ASCII or Latin1 text from an [ASCII/extended ASCII table](https://www.schoolcoders.com/data-representation/characters/extended-ascii/). The ASCII table maps numbers to symbols/letters. Those numbers can be converted out of decimal to other bases. Binary, octal, and hex are more common but base64 is also possible. Base64 can also be used to encode text directly. Hexadecimal and Base64 are commonly utilized for encoding raw binary data, as a way to compress its representation to fewer characters.
 
-Hexadecimal and Base64 are commonly utilized for encoding raw binary data, as a way to compress its representation to fewer characters.
+The difficulty with all of these ciphers is that decoding the data with the assumption that they encode ASCII, Latin1, or other common encodings (UTF-8, UTF-16), the outputs do not bear any ciphertext or plaintext. It is instead a series of symbols that are meaningless.
