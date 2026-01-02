@@ -7,6 +7,10 @@ import (
 	"github.com/camggould/binary-pattern-analysis/tools/utils"
 )
 
+func visualizeMonogramFrequencyAnalysis(ciphertext string) {
+	analysis.PrintCharacterFrequencies(ciphertext)
+}
+
 func main() {
 	path := "data/alpha.txt"
 	ciphertext, err := utils.GetCipherText(path)
@@ -15,5 +19,5 @@ func main() {
 		fmt.Printf("Failed to get ciphertext from file %s. %w\n", path, err)
 	}
 
-	analysis.PrintCharacterFrequencies(ciphertext)
+	visualizeMonogramFrequencyAnalysis(ciphertext)
 }
